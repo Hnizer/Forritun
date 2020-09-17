@@ -13,40 +13,80 @@
 
 a=1
 b=1
-while a != 3 and b != 1:
+while a<=3:
     if a == 1:
         if b == 1:
-            stefna='(N)orth'
+            print('You can travel: (N)orth.')
+            direction=input('Direction: ')
+            if direction == 'n' or direction == 'N':
+                  b += 1
+            else:
+                print('Not a valid direction!')
         elif b == 2:
-            stefna='(N)orth or (E)ast or (S)outh'
+            print('You can travel: (N)orth or (E)ast or (S)outh.')
+            direction=input('Direction: ')
+            if direction == 'n' or direction == 'N':
+                b += 1
+            elif direction == 'e' or direction == 'E':
+                a += 1
+            elif direction == 's' or direction == 'S':
+                b -= 1
+            else:
+                print('Not a valid direction!')
         elif b == 3:
-            stefna='(E)ast or (S)outh'
+            print('You can travel: (E)ast or (S)outh.')
+            direction=input('Direction: ')
+            if direction == 'e' or direction == 'E':
+                a += 1
+            elif direction == 's' or direction == 'S':
+                b -= 1
+            else:
+                print('Not a valid direction!')
     elif a == 2:
         if b == 1:
-            stefna='(N)orth'
+            print('You can travel: (N)orth.')
+            direction=input('Direction: ')
+            if direction == 'n' or direction == 'N':
+                  b += 1
+            else:
+                print('Not a valid direction!')
         elif b == 2:
-            stefna='(S)outh or (W)est'
+            print('You can travel: (S)outh or (W)est.')
+            direction=input('Direction: ')
+            if direction == 's' or direction == 'S':
+                b -= 1
+            elif direction == 'w' or direction == 'W':
+                a -= 1
+            else:
+                print('Not a valid direction!')
         elif b == 3:
-            stefna='(E)ast or (W)est'
+            print('You can travel: (E)ast or (W)est.')
+            direction=input('Direction: ')
+            if direction == 'e' or direction == 'E':
+                a += 1
+            elif direction == 'w' or direction == 'W':
+                a -= 1
+            else:
+                print('Not a valid direction!')
     elif a == 3:
         if b == 1:
             print('Victory!')
             break
         elif b == 2:
-            stefna='(N)orth or (S)outh'
+            print('You can travel: (N)orth or (S)outh.')
+            direction=input('Direction: ')
+            if direction == 'n' or direction == 'N':
+                b += 1
+            elif direction == 's' or direction == 'S':
+                b -= 1
+            else:
+                print('Not a valid direction!')
         elif b == 3:
-            stefna='(S)outh or (W)est'
-    print('You can travel: {}.'.format(stefna))
-    direction=input('Direction: ')
-    if direction == 'n' or direction == 'N':
-        b += 1
-    elif direction == 'e' or direction == 'E':
-        a += 1
-    elif direction == 's' or direction == 'S':
-        b -= 1
-    elif direction == 'w' or direction == 'W':
-        a -= 1
-    else:
-        print('Not a valid direction!')
-            
-            
+            print('You can travel: (S)outh or (W)est.')
+            direction=input('Direction: ')
+            if direction == 's' or direction == 'S':
+                b -= 1
+            elif direction == 'w' or direction == 'W':
+                a -= 1
+            else:
+                print('Not a valid direction!')
