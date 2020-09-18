@@ -1,5 +1,7 @@
-# Byrjum á því að skilgreina hvern reit
-# Gerum while lykkju sem endar þegar við förum á 3,1
+# Byrjum á að skilgreina a og b sem 1
+# Gerum while lykkju sem runnast endalaust á meðan a er jafnt eða minna en 3
+# Síðan notum við if setningar fyrir hvern reit sem að segja hvert má fara og senda leikmanninn síðan á réttan reit
+# Þegar leikmaður lendir á 3,1 prentum við Victory! og notum break skipun til að stöðva kóðan
 
 #1,1=north
 #1,2=south,east, north
@@ -10,6 +12,8 @@
 #3,1=victory
 #3,2=north,south
 #3,3=south,west
+
+# https://github.com/Hnizer/Forritun
 
 a=1
 b=1
